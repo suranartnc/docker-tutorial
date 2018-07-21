@@ -1,8 +1,7 @@
-FROM debian
-RUN apt-get update
-RUN apt-get install -y git
-RUN apt-get install -y vim
-
-#CMD ["echo", "hello world"]
-#COPY abc.txt /src/abc.txt
-ADD abc.txt /src/abc.txt
+FROM python:3.5
+RUN pip install Flask==0.11.1 redis==2.10.5
+RUN useradd -ms /bin/bash admin
+USER admin
+COPY app /app
+WORKDIR /app
+CMD ["python", "app.py"] 
