@@ -1,0 +1,13 @@
+version: '3'
+services:
+  python_app:
+    # By default, use image built from Dockerfile
+    # Can also specify image explicitly
+    # image: suranartn/python_app:v0.3
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - redis
+  redis:
+    image: redis:3.2.0
