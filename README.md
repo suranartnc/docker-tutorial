@@ -34,3 +34,18 @@
 
 - docker exec -it container_id command_to_run
 - docker exec -it container_id bash
+
+## Docker Compose
+- docker-compose up
+- docker-compose up --build
+- docker-compose down
+
+- docker-compose start
+- docker-compose stop
+- docker-compose rm
+
+- docker-compose ps
+
+- docker-compose logs
+- docker-compose logs -f
+- docker-compose logs service_name
