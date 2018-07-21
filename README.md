@@ -2,6 +2,7 @@
 
 ## Images
 - docker run -it tomcat:8.0
+- docker run -it tomcat:8.0 command_to_run
 
 - docker images
 - docker rmi image_id
@@ -16,6 +17,12 @@
 - docker start my_container
 - docker stop my_container
 
+- run = create && start
+- docker run -d --name redis redis:3.2.0
+
+- run app container that can connect to redis container
+- docker run -d -p 5000:5000 --link redis image_id
+
 - docker rm container_id
 - docker ps -aq --no-trunc -f status=exited | xargs docker rm
 
@@ -24,3 +31,6 @@
 
 - docker ps
 - docker ps -a
+
+- docker exec -it container_id command_to_run
+- docker exec -it container_id bash
