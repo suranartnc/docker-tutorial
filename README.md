@@ -44,6 +44,8 @@
 - docker-compose stop
 - docker-compose rm
 
+- docker-compose run service_name command_to_run
+
 - docker-compose ps
 
 - docker-compose logs
